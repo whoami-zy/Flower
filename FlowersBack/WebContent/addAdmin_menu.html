@@ -1,0 +1,109 @@
+
+<HTML><HEAD><TITLE>register</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gbk"><LINK 
+href="../registerImage.files/css.css" type=text/css rel=stylesheet>
+<STYLE>
+TD {
+	FONT-SIZE: 9pt; COLOR: #353535; LINE-HEIGHT: 120%
+}
+BODY {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 120%
+}
+A:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:hover {
+	RIGHT: 0px; COLOR: #336699; POSITION: relative; TOP: 1px; TEXT-DECORATION: none
+}
+.style4 {
+	font-size: 18px;
+	color: #0000FF;
+}
+.style1 {	font-family: "幼圆";
+	font-size: 18px;
+	color: #FF0000;
+}
+.style5 {font-size: 16px}
+</STYLE>
+<script type="text/javascript">
+function passwd1(){
+	if(document.getElementById("password1").value==""){
+			  alert('密码不能为空');
+
+			}else{
+		var getname1=document.getElementById("username").value;
+		var getpasswd=document.getElementById("password1").value;
+		if(getname1==getpasswd){
+			alert('用户名和密码不能相同');  
+		}else{
+			
+			}
+		var passwdlength=getpasswd.length;
+					  if(passwdlength>=6&&passwdlength<=20){	
+						
+						}else{
+						alert('请正确填写，密码在6到20位之间')
+						}
+	}
+	}
+function msgsubmit(){
+	var r=confirm("请选择是否查看用户名和密码");
+			if(r==true){
+		var getname13=document.getElementById("username").value;
+		var getpasswd23=document.getElementById("password1").value;
+					alert("用户名："+getname13+"   "+"密码："+getpasswd23);
+				}
+				else{
+			  var getname14=document.getElementById("username").value;
+						document.write("你好，"+getname14);
+					}
+	}
+</script>
+
+
+<META content="MSHTML 6.00.2900.2802" name=GENERATOR></HEAD>
+<BODY 
+onmouseover="window.status=' 如果您喜欢本站,别忘了把本站介绍给您的好友哦！：）';return true" 
+leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+<br>
+<p>&nbsp;</p>
+<p>
+  <SCRIPT language=JavaScript type=text/JavaScript>
+
+  </SCRIPT>
+</p>
+<p>  <SCRIPT language=JavaScript type=text/JavaScript>
+
+</SCRIPT>
+    
+</p>
+<FORM  action="addAdmin.jsp" onSubmit="msgsubmit()" method=post>
+<TABLE width="378" height=148 
+      border=0 align=center>
+  <TBODY>
+    <TR bgColor=#fcfcfc>
+      <TD width="51%" bgcolor="#FFFFFF">
+      <div align="center" class="style4"><span class="style1">★ </span>管理员名：</div></TD>
+      <TD width="49%" bgcolor="#FFFFFF"><div align="left">
+          <INPUT name="adminName" id="username" maxLength=20;>
+      </div></TD>
+    </TR>
+    <TR bgColor=#fcfcfc>
+      <TD bgcolor="#FFFFFF"><div align="center"><span class="style4"><span class="style1">★ </span><span class="style5">密&nbsp;&nbsp;&nbsp;&nbsp; 码</span>：</span></div></TD>
+      <TD width="49%" bgcolor="#FFFFFF"><INPUT type="password" id="password1" name="adminPass" onblur="passwd1()" maxLength=20;></TD>
+    </TR>
+    <TR bgColor=#FFFFFF>
+      <TD colSpan=2 align=middle><input name="submit" type="submit" value="提交信息"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+</FORM>
+<div align="center"></div>
+<p>&nbsp;</p>
+</BODY></HTML>
